@@ -3,7 +3,7 @@ Tests for data models.
 """
 import pytest
 
-from src.manifest.models import DeliveryConfig, ManifestConfig, Project
+from lib.manifest.models import DeliveryConfig, ManifestConfig, Project
 
 
 class TestProject:

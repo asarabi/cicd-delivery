@@ -1,8 +1,8 @@
 """
 Tests for transformers.
 """
-from src.transformer.branch_transformer import BranchTransformer
-from src.transformer.repo_transformer import RepoTransformer
+from lib.transformer.branch_transformer import BranchTransformer
+from lib.transformer.repo_transformer import RepoTransformer
 
 
 class TestBranchTransformer:

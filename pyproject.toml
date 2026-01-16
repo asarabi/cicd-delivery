@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-cicd-delivery = "src.cli.main:main"
+cicd-delivery = "delivery:main"
 
 [project.optional-dependencies]
 dev = [
@@ -35,7 +35,7 @@ addopts = [
     "-v",
     "--strict-markers",
     "--tb=short",
-    "--cov=src",
+    "--cov=.",
     "--cov-report=term-missing",
 ]
 
@@ -55,7 +55,7 @@ warn_unused_configs = true
 disallow_untyped_defs = false
 
 [tool.coverage.run]
-source = ["src"]
+source = ["."]
 omit = ["*/tests/*", "*/test_*.py"]
 
 [tool.coverage.report]

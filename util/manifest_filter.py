@@ -1,10 +1,10 @@
 """
-Revision filter for manifest projects.
+Revision filter utilities for manifest projects.
 """
 import re
 from typing import List
 
-from .models import Project
+from lib.manifest.models import Project
 
 
 def is_hash_revision(revision: str) -> bool:

@@ -1,0 +1,44 @@
+# Gerrit Delivery Configuration
+
+manifest:
+  # Manifest repository URL (required)
+  repo_url: "https://android.googlesource.com/platform/manifest"
+  
+  # Specify either branch or tag (not both)
+  branch: "main"
+  # tag: "android-14.0.0_r1"
+  
+  # Default revision (optional, will be used if project doesn't specify revision)
+  # default_revision: "main"
+
+delivery:
+  # Gerrit server URL (required)
+  # For HTTP: "https://gerrit.example.com"
+  # For SSH: "ssh://gerrit.example.com:29418" or "gerrit.example.com"
+  gerrit_url: "https://gerrit.example.com"
+  
+  # Authentication configuration
+  auth:
+    # Authentication method: "ssh" or "http" (required)
+    method: "ssh"
+    
+    # For SSH authentication
+    # Path to SSH private key (required if method is "ssh")
+    # Can use ~ for home directory
+    ssh_key_path: "~/.ssh/id_rsa"
+    
+    # For HTTP authentication (required if method is "http")
+    # You can also set GERRIT_USERNAME and GERRIT_PASSWORD environment variables instead
+    # username: "your_username"
+    # password: "your_password"
+  
+  # Branch name transformation options
+  # If true, append date suffix (yymmdd) to branch names
+  # Example: "main" -> "main240116" (if run on 2024-01-16)
+  branch_transform: false
+  
+  # Repository name transformation
+  # If specified, insert alias in the middle of repository path
+  # Example: "platform/build" -> "platform/alias/build"
+  # Set to null to disable
+  repo_alias: null

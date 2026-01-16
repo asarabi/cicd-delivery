@@ -7,7 +7,7 @@ from typing import Optional
 
 import yaml
 
-from ..manifest.models import DeliveryConfig, ManifestConfig
+from lib.manifest.models import DeliveryConfig, ManifestConfig
 
 
 class ConfigLoader:

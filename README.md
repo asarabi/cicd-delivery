@@ -6,8 +6,17 @@ Python 기반 CI/CD 프로젝트입니다.
 
 ```
 cicd-delivery/
-├── src/              # 소스 코드
+├── config/           # 설정 관리
+│   └── settings.py
+├── util/             # 유틸리티 함수
+│   └── manifest_filter.py
+├── lib/              # 라이브러리 (클래스들)
+│   ├── manifest/     # Manifest 관련
+│   ├── delivery/     # Gerrit 전송 관련
+│   └── transformer/  # 변환기
+├── delivery.py       # CLI 진입점
 ├── tests/            # 테스트 코드
+├── config/           # 설정 파일 (YAML)
 ├── pytest.ini        # pytest 설정
 ├── conftest.py       # pytest 공통 설정
 ├── pyproject.toml    # 프로젝트 설정
@@ -93,7 +102,7 @@ mypy src/
 
 2. 도구 실행:
    ```bash
-   python -m src.cli.main -c config/config.yaml
+   python -m delivery -c config/config.yaml
    # 또는 설치 후
    cicd-delivery -c config/config.yaml
    ```

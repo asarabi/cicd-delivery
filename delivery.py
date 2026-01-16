@@ -6,8 +6,8 @@ import logging
 import sys
 from pathlib import Path
 
-from ..config.settings import ConfigLoader
-from ..delivery.orchestrator import DeliveryOrchestrator
+from config.settings import ConfigLoader
+from lib.delivery.orchestrator import DeliveryOrchestrator
 
 
 def setup_logging(verbose: bool = False) -> None:

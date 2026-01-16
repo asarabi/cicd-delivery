@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from src.manifest.parser import ManifestParser
+from lib.manifest.parser import ManifestParser
 
 
 @pytest.fixture

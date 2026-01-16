@@ -1,8 +1,8 @@
 """
 Tests for revision filter.
 """
-from src.manifest.filter import filter_projects_by_revision, is_hash_revision
-from src.manifest.models import Project
+from util.manifest_filter import filter_projects_by_revision, is_hash_revision
+from lib.manifest.models import Project
 
 
 class TestIsHashRevision:

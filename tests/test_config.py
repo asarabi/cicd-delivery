@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from src.config.settings import ConfigLoader
+from config.settings import ConfigLoader
 
 
 @pytest.fixture
